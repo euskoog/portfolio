@@ -55,7 +55,9 @@ const Navbar = (props) => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-            Erik Skoog
+            <LinkItem href="/" path={path}>
+              Erik Skoog
+            </LinkItem>
           </Heading>
         </Flex>
 
