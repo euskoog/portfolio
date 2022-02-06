@@ -6,7 +6,7 @@ import { WorkGridItem } from "../components/grid-item";
 import spreetail from "../public/images/spreetail.png";
 
 const Projects = () => (
-  <Layout title="Works">
+  <Layout title="Projects">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
         Hackathon Projects

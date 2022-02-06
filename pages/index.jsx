@@ -13,6 +13,7 @@ import {
 import Section from "../components/section";
 import Paragraph from "../components/paragraph";
 import Timeline from "../components/timeline";
+import Skills from "../components/skills";
 import {
   IoLogoTwitter,
   IoLogoInstagram,
@@ -76,6 +77,13 @@ const Page = () => {
           create. Developing meaningful projects and helping people solve
           problems is Erik's highest priority.
         </Paragraph>
+      </Section>
+
+      <Section>
+        <Heading as="h2" variant="section-title">
+          Top Skills
+        </Heading>
+        <Skills />
       </Section>
 
       <Section>

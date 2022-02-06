@@ -45,6 +45,10 @@ const Timeline = () => {
     setIsHidden(false);
   }
 
+  function showLess() {
+    setIsHidden(true);
+  }
+
   return (
     <CardTimeline>
       <Card
@@ -73,7 +77,7 @@ const Timeline = () => {
               borderColor="whiteAlpha800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="100px"
+              maxWidth="85px"
               display="inline-block"
               borderRadius="full"
               src="/images/unl-logo-square.jpg"
@@ -106,7 +110,7 @@ const Timeline = () => {
               borderColor="whiteAlpha800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="100px"
+              maxWidth="85px"
               display="inline-block"
               borderRadius="full"
               src="/images/raikes-square.png"
@@ -139,7 +143,7 @@ const Timeline = () => {
               borderColor="whiteAlpha800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="100px"
+              maxWidth="85px"
               display="inline-block"
               borderRadius="full"
               src="/images/medsol.png"
@@ -184,7 +188,7 @@ const Timeline = () => {
                   borderColor="whiteAlpha800"
                   borderWidth={2}
                   borderStyle="solid"
-                  maxWidth="100px"
+                  maxWidth="85px"
                   display="inline-block"
                   borderRadius="full"
                   src="/images/unl-logo-square.jpg"
@@ -217,7 +221,7 @@ const Timeline = () => {
                   borderColor="whiteAlpha800"
                   borderWidth={2}
                   borderStyle="solid"
-                  maxWidth="100px"
+                  maxWidth="85px"
                   display="inline-block"
                   borderRadius="full"
                   src="/images/spreetail.png"
@@ -226,6 +230,15 @@ const Timeline = () => {
               </Box>
             </CardBody>
           </Card>
+          <Box align="center">
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="teal"
+              onClick={showLess}
+            >
+              Show Less
+            </Button>
+          </Box>
         </Section>
       )}
     </CardTimeline>
