@@ -46,7 +46,7 @@ const Skills = () => {
     <Container>
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <SkillsCard align="center">
-          <SkillImage src="/images/react.png" />
+          <SkillImage src="/images/react-grey.png" />
           <SkillName align="center" size="lg">
             React
           </SkillName>
@@ -67,7 +67,7 @@ const Skills = () => {
                 transformOrigin: "center center",
 
                 // Colors
-                pathColor: "#00ccff",
+                pathColor: "#319795",
                 textColor: useColorModeValue("#525252", "white"),
                 trailColor: useColorModeValue("#d6d6d6", "#313134"),
                 backgroundColor: "#ffcf3f",
@@ -76,7 +76,7 @@ const Skills = () => {
           </SkillLevelContainer>
         </SkillsCard>
         <SkillsCard align="center">
-          <SkillImage src="/images/typescript.png" />
+          <SkillImage src="/images/typescript-grey.png" />
           <SkillName align="center" size="lg">
             TypeScript
           </SkillName>
@@ -97,7 +97,7 @@ const Skills = () => {
                 transformOrigin: "center center",
 
                 // Colors
-                pathColor: "#007acc",
+                pathColor: "#319795",
                 textColor: useColorModeValue("#525252", "white"),
                 trailColor: useColorModeValue("#d6d6d6", "#313134"),
                 backgroundColor: "#ffcf3f",
@@ -106,7 +106,7 @@ const Skills = () => {
           </SkillLevelContainer>
         </SkillsCard>
         <SkillsCard align="center">
-          <SkillImage src="/images/csharp.png" />
+          <SkillImage src="/images/csharp-grey.png" />
           <SkillName align="center" size="lg">
             C#
           </SkillName>
@@ -127,7 +127,7 @@ const Skills = () => {
                 transformOrigin: "center center",
 
                 // Colors
-                pathColor: "#9b4f97",
+                pathColor: "#319795",
                 textColor: useColorModeValue("#525252", "white"),
                 trailColor: useColorModeValue("#d6d6d6", "#313134"),
                 backgroundColor: "#ffcf3f",
@@ -136,7 +136,7 @@ const Skills = () => {
           </SkillLevelContainer>
         </SkillsCard>
         <SkillsCard align="center">
-          <SkillImage src="/images/python.png" />
+          <SkillImage src="/images/python-grey.png" />
           <SkillName align="center" size="lg">
             Python
           </SkillName>
@@ -157,7 +157,7 @@ const Skills = () => {
                 transformOrigin: "center center",
 
                 // Colors
-                pathColor: "#ffcf3f",
+                pathColor: "#319795",
                 textColor: useColorModeValue("#525252", "white"),
                 trailColor: useColorModeValue("#d6d6d6", "#313134"),
                 backgroundColor: "#ffcf3f",
