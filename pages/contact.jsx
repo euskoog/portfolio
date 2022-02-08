@@ -1,124 +1,120 @@
-import React from 'react'
-import Swal from 'sweetalert2'
-import {Divider, Heading, Button, Input, useColorModeValue, Textarea, Container} from '@chakra-ui/react'
-import Section from '../components/section';
+import React, { useRef } from "react";
+import Swal from "sweetalert2";
+import {
+  Heading,
+  Button,
+  Input,
+  useColorModeValue,
+  Textarea,
+  Container,
+} from "@chakra-ui/react";
+import Section from "../components/section";
+import emailjs from "@emailjs/browser";
 
-class Contact extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = { feedback: '',
-                      name: '',
-                      email: '' 
-                     };
-      }
-      // saves the user's name entered to state
-      nameChange = (event) => {
-        this.setState({name: event.target.value})
-      }
-      
-      // saves the user's email entered to state
-      emailChange = (event) => {
-        this.setState({email: event.target.value})
-      }
+const Contact = () => {
+  const form = useRef();
 
-      // saves the user's message entered to state
-      messageChange = (event) => {
-        this.setState({feedback: event.target.value})
-      }
+  //onSubmit of email form
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-      //onSubmit of email form
-      handleSubmit = (event) => {
-        event.preventDefault();
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_jnhgydg",
+        form.current,
+        "user_iL4qMDdeMnxt0s6ioIX7F"
+      )
+      .then(() => {
+        // Email successfully sent alert
+        Swal.fire({
+          title: "Email Successfully Sent",
+          icon: "success",
+        });
+      })
+      // Email Failed to send Error alert
+      .catch((err) => {
+        Swal.fire({
+          title: "Email Failed to Send",
+          icon: "error",
+        });
+        console.error("Email Error:", err);
+      });
+  };
 
-        //This templateId is created in EmailJS.com
-        const templateId = 'basic';
-    
-        //This is a custom method from EmailJS that takes the information 
-        //from the form and sends the email with the information gathered 
-        //and formats the email based on the templateID provided.
-        this.sendFeedback(templateId, {
-                                        message: this.state.feedback, 
-                                        name: this.state.name, 
-                                        email: this.state.email
-                                       }
-                         )
+  return (
+    <Section>
+      <form className="test-mailing" ref={form} onSubmit={handleSubmit}>
+        <br />
+        <div style={{ fontSize: "1.2rem" }}>
+          <div>
+            <Heading size="md" htmlFor="name">
+              Your Name:
+            </Heading>
+            <Input
+              marginTop="5px"
+              className="form-control email-inputs"
+              name="from_name"
+              type="text"
+              backgroundColor={() => useColorModeValue("#f5f0e8", "#313134")}
+              placeholder="Name"
+              id="name"
+              required
+            />
+          </div>
 
-      }
-    
-      //Custom EmailJS method
-      sendFeedback = (templateId, variables) => {
-        window.emailjs.send(
-          'gmail', templateId,
-          variables
-          ).then(res => {
-            // Email successfully sent alert
-            Swal.fire({
-              title: 'Email Successfully Sent',
-              icon: 'success'
-            })
-          })
-          // Email Failed to send Error alert
-          .catch(err => {
-            Swal.fire({
-              title: 'Email Failed to Send',
-              icon: 'error'
-            })
-            console.error('Email Error:', err)
-          })
-      }
-    
-      render() {
-        return (
-          <Section>
+          <br />
 
-          <form className="test-mailing" onSubmit={this.handleSubmit}>
+          <div>
+            <Heading size="md" htmlFor="email">
+              Your Email:
+            </Heading>
+            <Input
+              marginTop="5px"
+              className="form-control email-inputs"
+              name="from_email"
+              type="text"
+              variant="outline"
+              placeholder="Email Address"
+              backgroundColor={() => useColorModeValue("#f5f0e8", "#313134")}
+              id="email"
+              required
+            />
+          </div>
 
-            <br/>
-            <div style={{fontSize: "1.2rem"}}>
-              <div>
-                  <Heading size="md" htmlFor="name">Your Name:</Heading>
-                  <Input marginTop="5px" className="form-control email-inputs" name="user_name" type="text" backgroundColor={() =>  useColorModeValue("#f5f0e8", "#313134")} placeholder='Name' 
-                    id="name" onChange={this.nameChange} required/>
-              </div>
+          <br />
 
-              <br/>
+          <Heading size="md" htmlFor="message">
+            Message:
+          </Heading>
+          <div>
+            <Textarea
+              marginTop="5px"
+              backgroundColor={() => useColorModeValue("#f5f0e8", "#313134")}
+              id="message"
+              name="message"
+              placeholder="Put your message here"
+              required
+              className="email-text-area form-control"
+              rows="15"
+              cols="20"
+            />
+          </div>
+        </div>
+        <Container align="center">
+          <Button
+            marginTop="20px"
+            size="lg"
+            colorScheme="teal"
+            type="submit"
+            value="Send"
+          >
+            Submit
+          </Button>
+        </Container>
+      </form>
+    </Section>
+  );
+};
 
-              <div>
-                  <Heading size="md" htmlFor="email">Your Email:</Heading>
-                  <Input marginTop="5px"  className="form-control email-inputs" name="user_email" type="text" variant='outline' placeholder='Email Address' backgroundColor={() =>  useColorModeValue("#f5f0e8", "#313134")}
-                    id="email" onChange={this.emailChange} required/>
-              </div>
-
-              <br/>
-
-              <Heading size="md" htmlFor="message">
-                  Message:
-              </Heading>
-              <div>
-                <Textarea
-                marginTop="5px" 
-                backgroundColor={() =>  useColorModeValue("#f5f0e8", "#313134")}
-                id="message"
-                name="message"
-                onChange={this.messageChange}
-                placeholder="Put your message here"
-                required
-                className="email-text-area form-control"
-                rows="15"
-                cols="20"
-                />
-              </div>
-
-            </div>
-            <Container align="center">
-
-              <Button marginTop="20px" size="lg" colorScheme="teal" type="Submit" value="Submit">
-                Submit
-              </Button>
-            </Container>
-          </form>
-                </Section>
-        )
-      }
-}
-export default Contact
+export default Contact;

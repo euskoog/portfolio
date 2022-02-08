@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "../theme-toggle-button";
+import { DownloadIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
@@ -78,6 +79,9 @@ const Navbar = (props) => {
           <LinkItem href="/contact" path={path}>
             Contact
           </LinkItem>
+          <LinkItem href="/public/Erik-Skoog-Resume.pdf" path={path}>
+            Resume{<ChevronDownIcon marginLeft="5px" />}
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
@@ -103,6 +107,11 @@ const Navbar = (props) => {
                 </NextLink>
                 <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contact</MenuItem>
+                </NextLink>
+                <NextLink href="../public/Erik-Skoog-Resume.pdf" passHref>
+                  <MenuItem as={Link}>
+                    Resume{<ChevronDownIcon marginLeft="5px" />}
+                  </MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>
