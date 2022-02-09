@@ -3,10 +3,10 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 
 import { WorkGridItem } from "../components/grid-item";
-import crossGuard from "../public/images/crossguard.png";
+import crossGuard from "../public/images/crossGuard.png";
 import scrapshot from "../public/images/scrapshot2.png";
 import spellmate from "../public/images/spellmate.jpg";
-import getDown from "../public/images/getDown.gif";
+import getDown from "../public/images/getdown.gif";
 import weevilWarrior from "../public/images/weevil.gif";
 import whizblade from "../public/images/whizblade-title.gif";
 import squatch from "../public/images/squatch-title.gif";
