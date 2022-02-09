@@ -80,7 +80,7 @@ const Navbar = (props) => {
             Contact
           </LinkItem>
           <LinkItem href="/public/Erik-Skoog-Resume.pdf" path={path}>
-            Resume{<ChevronDownIcon marginLeft="5px" />}
+            Resume{<ChevronDownIcon marginLeft="2px" />}
           </LinkItem>
         </Stack>
 
@@ -110,7 +110,7 @@ const Navbar = (props) => {
                 </NextLink>
                 <NextLink href="../public/Erik-Skoog-Resume.pdf" passHref>
                   <MenuItem as={Link}>
-                    Resume{<ChevronDownIcon marginLeft="5px" />}
+                    Resume{<ChevronDownIcon marginLeft="2px" />}
                   </MenuItem>
                 </NextLink>
               </MenuList>

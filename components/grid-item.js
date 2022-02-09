@@ -43,9 +43,32 @@ export const WorkGridItem = ({ children, id, title, thumbnail, link }) => (
   </Box>
 );
 
+export const MusicGridItem = ({ children, id, title, thumbnail, link }) => (
+  <Box w="100%" textAlign="center">
+    <NextLink href={`${link}`}>
+      <LinkBox cursor="pointer">
+        <Image
+          src={thumbnail}
+          alt={title}
+          className="music-grid-item-thumbnail"
+        />
+        <LinkOverlay href={`${link}`}>
+          <Text mt={2} fontSize={20}>
+            {title}
+          </Text>
+        </LinkOverlay>
+        <Text fontSize={14}>{children}</Text>
+      </LinkBox>
+    </NextLink>
+  </Box>
+);
+
 export const GridItemStyle = () => (
   <Global
     styles={`
+      .music-grid-item-thumbnail {
+        border-radius: 150px;
+      }
       .grid-item-thumbnail {
         border-radius: 12px;
       }

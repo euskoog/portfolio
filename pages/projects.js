@@ -3,7 +3,6 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 
 import { WorkGridItem } from "../components/grid-item";
-import spreetail from "../public/images/spreetail.png";
 import crossGuard from "../public/images/crossguard.png";
 import scrapshot from "../public/images/scrapshot2.png";
 import spellmate from "../public/images/spellmate.jpg";
