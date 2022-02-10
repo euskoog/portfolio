@@ -50,7 +50,7 @@ const Skills = () => {
           <SkillName align="center" size="lg">
             React
           </SkillName>
-          <SkillLevelContainer>
+          {/* <SkillLevelContainer>
             <CircularProgressbar
               value={reactPercentage}
               text={`${reactPercentage}%`}
@@ -73,14 +73,14 @@ const Skills = () => {
                 backgroundColor: "#ffcf3f",
               })}
             />
-          </SkillLevelContainer>
+          </SkillLevelContainer> */}
         </SkillsCard>
         <SkillsCard align="center">
           <SkillImage src="/images/typescript-grey.png" />
           <SkillName align="center" size="lg">
             TypeScript
           </SkillName>
-          <SkillLevelContainer>
+          {/* <SkillLevelContainer>
             <CircularProgressbar
               value={TSPercentage}
               text={`${TSPercentage}%`}
@@ -103,14 +103,14 @@ const Skills = () => {
                 backgroundColor: "#ffcf3f",
               })}
             />
-          </SkillLevelContainer>
+          </SkillLevelContainer> */}
         </SkillsCard>
         <SkillsCard align="center">
           <SkillImage src="/images/csharp-grey.png" />
           <SkillName align="center" size="lg">
             C#
           </SkillName>
-          <SkillLevelContainer>
+          {/* <SkillLevelContainer>
             <CircularProgressbar
               value={CSPercentage}
               text={`${CSPercentage}%`}
@@ -133,14 +133,14 @@ const Skills = () => {
                 backgroundColor: "#ffcf3f",
               })}
             />
-          </SkillLevelContainer>
+          </SkillLevelContainer> */}
         </SkillsCard>
         <SkillsCard align="center">
           <SkillImage src="/images/python-grey.png" />
           <SkillName align="center" size="lg">
             Python
           </SkillName>
-          <SkillLevelContainer>
+          {/* <SkillLevelContainer>
             <CircularProgressbar
               value={pythonPercentage}
               text={`${pythonPercentage}%`}
@@ -163,7 +163,7 @@ const Skills = () => {
                 backgroundColor: "#ffcf3f",
               })}
             />
-          </SkillLevelContainer>
+          </SkillLevelContainer> */}
         </SkillsCard>
       </SimpleGrid>
     </Container>
