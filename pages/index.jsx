@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import Section from "../components/section";
 import Paragraph from "../components/paragraph";
-import Timeline from "../components/timeline";
+import { Work, Education } from "../components/timeline";
 import Skills from "../components/skills";
 import {
   IoLogoTwitter,
@@ -88,10 +88,18 @@ const Page = () => {
 
       <Section>
         <Heading as="h2" variant="section-title">
-          Education / Work History
+          Work History
         </Heading>
         <br />
-        <Timeline />
+        <Work />
+      </Section>
+
+      <Section>
+        <Heading as="h2" variant="section-title">
+          Education
+        </Heading>
+        <br />
+        <Education />
       </Section>
 
       <Section>
