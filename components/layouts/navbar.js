@@ -121,11 +121,11 @@ const Navbar = (props) => {
                 <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contact</MenuItem>
                 </NextLink>
-                <DownloadLink href="Erik-Skoog-Resume.pdf" passHref download>
+                <a href="Erik-Skoog-Resume.pdf" passHref download>
                   <MenuItem as={Link}>
                     Resume{<ChevronDownIcon marginLeft="2px" />}
                   </MenuItem>
-                </DownloadLink>
+                </a>
               </MenuList>
             </Menu>
           </Box>
