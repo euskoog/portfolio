@@ -17,6 +17,15 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "../theme-toggle-button";
 import { DownloadIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import styled from "@emotion/styled";
+
+const DownloadLink = styled.a`
+  padding: 8px;
+  text-underline-offset: 3px;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
@@ -78,9 +87,14 @@ const Navbar = (props) => {
           <LinkItem href="/contact" path={path}>
             Contact
           </LinkItem>
-          <LinkItem href="/public/Erik-Skoog-Resume.pdf" path={path}>
+          <DownloadLink
+            styles={{ hover: "underline" }}
+            href="Erik-Skoog-Resume.pdf"
+            path={path}
+            download
+          >
             Resume{<ChevronDownIcon marginLeft="2px" />}
-          </LinkItem>
+          </DownloadLink>
         </Stack>
 
         <Box flex={1} align="right">
@@ -107,11 +121,11 @@ const Navbar = (props) => {
                 <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contact</MenuItem>
                 </NextLink>
-                <NextLink href="../public/Erik-Skoog-Resume.pdf" passHref>
+                <DownloadLink href="Erik-Skoog-Resume.pdf" passHref download>
                   <MenuItem as={Link}>
                     Resume{<ChevronDownIcon marginLeft="2px" />}
                   </MenuItem>
-                </NextLink>
+                </DownloadLink>
               </MenuList>
             </Menu>
           </Box>
