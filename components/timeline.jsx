@@ -38,7 +38,7 @@ const CardTimeline = styled(Section)`
   }
 `;
 
-const Timeline = () => {
+export const Work = () => {
   const [isHidden, setIsHidden] = useState(true);
 
   function showRest() {
@@ -59,46 +59,11 @@ const Timeline = () => {
         <CardBody>
           <Box flexGrow={1}>
             <Heading as="h2" size="lg">
-              University of Nebraska-Lincoln
-            </Heading>
-            <p>Projected Graduation (2018-2022)</p>
-            <br />
-            <p>- Bachelor of Computer Science, Focus in Software Engineering</p>
-            <p>- Minors: Mathematics, Music Technology</p>
-          </Box>
-          <Box
-            flexShrink={0}
-            mt={{ base: 4, md: 0 }}
-            ml={{ md: 6 }}
-            align="center"
-          >
-            <Image
-              marginLeft="10px"
-              borderColor="whiteAlpha800"
-              borderWidth={2}
-              borderStyle="solid"
-              maxWidth="85px"
-              display="inline-block"
-              borderRadius="full"
-              src="/images/unl-logo-square.jpg"
-              alt="Profile Image"
-            />
-          </Box>
-        </CardBody>
-      </Card>
-      <Card
-        style={{
-          backgroundColor: useColorModeValue("#f5f0e8", "#313134"),
-        }}
-      >
-        <CardBody>
-          <Box flexGrow={1}>
-            <Heading as="h2" size="lg">
               UNL Raikes Design Studio
             </Heading>
             <p>Development Manager (2021-2022)</p>
             <br />
-            <p>- .NET, Neo4j</p>
+            <p>• .NET, Neo4j</p>
           </Box>
           <Box
             flexShrink={0}
@@ -131,7 +96,7 @@ const Timeline = () => {
             </Heading>
             <p>Software Development Intern (2021-present)</p>
             <br />
-            <p>- React, Typescript, Node</p>
+            <p>• React, Typescript, Node</p>
           </Box>
           <Box
             flexShrink={0}
@@ -148,6 +113,39 @@ const Timeline = () => {
               borderRadius="full"
               src="/images/medsol.png"
               alt="medical solutions"
+            />
+          </Box>
+        </CardBody>
+      </Card>
+      <Card
+        style={{
+          backgroundColor: useColorModeValue("#f5f0e8", "#313134"),
+        }}
+      >
+        <CardBody>
+          <Box flexGrow={1}>
+            <Heading as="h2" size="lg">
+              UNL Senior Design
+            </Heading>
+            <p>Development Manager (2020-2021)</p>
+            <br />
+            <p>• React Native, CSS, Node</p>
+          </Box>
+          <Box
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 6 }}
+            align="center"
+          >
+            <Image
+              borderColor="whiteAlpha800"
+              borderWidth={2}
+              borderStyle="solid"
+              maxWidth="85px"
+              display="inline-block"
+              borderRadius="full"
+              src="/images/unl-logo-square.jpg"
+              alt="unl"
             />
           </Box>
         </CardBody>
@@ -172,44 +170,11 @@ const Timeline = () => {
             <CardBody>
               <Box flexGrow={1}>
                 <Heading as="h2" size="lg">
-                  UNL Senior Design
-                </Heading>
-                <p>Development Manager (2020-2021)</p>
-                <br />
-                <p>- React Native, CSS, Node</p>
-              </Box>
-              <Box
-                flexShrink={0}
-                mt={{ base: 4, md: 0 }}
-                ml={{ md: 6 }}
-                align="center"
-              >
-                <Image
-                  borderColor="whiteAlpha800"
-                  borderWidth={2}
-                  borderStyle="solid"
-                  maxWidth="85px"
-                  display="inline-block"
-                  borderRadius="full"
-                  src="/images/unl-logo-square.jpg"
-                  alt="unl"
-                />
-              </Box>
-            </CardBody>
-          </Card>
-          <Card
-            style={{
-              backgroundColor: useColorModeValue("#f5f0e8", "#313134"),
-            }}
-          >
-            <CardBody>
-              <Box flexGrow={1}>
-                <Heading as="h2" size="lg">
                   Spreetail
                 </Heading>
                 <p>Software Engineering Intern (2020)</p>
                 <br />
-                <p>- React, C#, Node</p>
+                <p>• React, C#, Node</p>
               </Box>
               <Box
                 flexShrink={0}
@@ -245,4 +210,54 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export const Education = () => {
+  const [isHidden, setIsHidden] = useState(true);
+
+  function showRest() {
+    setIsHidden(false);
+  }
+
+  function showLess() {
+    setIsHidden(true);
+  }
+
+  return (
+    <CardTimeline>
+      <Card
+        style={{
+          backgroundColor: useColorModeValue("#f5f0e8", "#313134"),
+        }}
+      >
+        <CardBody>
+          <Box flexGrow={1}>
+            <Heading as="h2" size="lg">
+              University of Nebraska-Lincoln
+            </Heading>
+            <p>Projected Graduation (2018-2022)</p>
+            <br />
+            <p>• Bachelor of Computer Science, Focus in Software Engineering</p>
+            <p>• Minors: Mathematics, Music Technology</p>
+          </Box>
+          <Box
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 6 }}
+            align="center"
+          >
+            <Image
+              marginLeft="10px"
+              borderColor="whiteAlpha800"
+              borderWidth={2}
+              borderStyle="solid"
+              maxWidth="85px"
+              display="inline-block"
+              borderRadius="full"
+              src="/images/unl-logo-square.jpg"
+              alt="Profile Image"
+            />
+          </Box>
+        </CardBody>
+      </Card>
+    </CardTimeline>
+  );
+};
